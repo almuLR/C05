@@ -6,7 +6,7 @@
 /*   By: almlopez <almlopez@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 17:18:10 by almlopez          #+#    #+#             */
-/*   Updated: 2024/11/21 17:30:01 by almlopez         ###   ########.fr       */
+/*   Updated: 2024/11/21 19:06:32 by almlopez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ int	ft_recursive_power(int nb, int power)
 	{
 		if (power == 0)
 		{
-			m = nb * 1;
+			return (1);
 		}
-		if(power == 1)
+		else
 		{
-			return (ft_recursive_power(m, power - 1));
+			return (nb * ft_recursive_power(nb, power - 1));
 		}
 	}
 	return (0);
