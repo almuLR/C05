@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_power.c                               :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: almlopez <almlopez@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/21 17:18:10 by almlopez          #+#    #+#             */
-/*   Updated: 2024/11/21 19:07:56 by almlopez         ###   ########.fr       */
+/*   Created: 2024/11/21 19:09:29 by almlopez          #+#    #+#             */
+/*   Updated: 2024/11/21 19:20:18 by almlopez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-int	ft_recursive_power(int nb, int power)
+int	ft_fibonacci(int index)
 {
-	int	m;
-
-	m = 1;	
-	if (power >= 0)
+	if (index == 0)
 	{
-		if (power == 0)
-		{
-			retuelsee		{
-			return (nb * ft_recursive_power(nb, power - 1));
-		}
+		return (0);
 	}
-	return (0);
+	else if (index == 1)
+	{
+		return (1);
+	}
+	else
+	{
+		return ft_fibonacci(index - 1) + ft_fibonacci(index - 2);
+	}
 }
+
 #include <stdio.h>
-int	main(){
-	printf("%d\n", ft_recursive_power(0, 0));
-        printf("%d\n", ft_recursive_power(3, 4));
-        printf("%d\n", ft_recursive_power(2, 1));
-        printf("%d\n", ft_recursive_power(-2, 2));
+int	main()
+{
+	printf("%d\n", ft_fibonacci(8));
+	printf("%d\n", ft_fibonacci(5));
+	printf("%d\n", ft_fibonacci(6));
 }
