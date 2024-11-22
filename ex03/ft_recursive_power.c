@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_recursive_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: almlopez <almlopez@student.42madrid.c      +#+  +:+       +#+        */
+/*   By: almlopez <almlopez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 17:18:10 by almlopez          #+#    #+#             */
-/*   Updated: 2024/11/21 19:07:56 by almlopez         ###   ########.fr       */
+/*   Updated: 2024/11/22 14:06:25 by almlopez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,10 @@ int	ft_recursive_power(int nb, int power)
 	{
 		if (power == 0)
 		{
-			retuelsee		{
+			return (1);
+		}
+		else
+		{
 			return (nb * ft_recursive_power(nb, power - 1));
 		}
 	}
